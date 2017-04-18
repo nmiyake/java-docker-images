@@ -5,4 +5,6 @@ RUN apk add --no-cache \
     bash \
     libstdc++ \
     git \
-    openssh
+    openssh \
+    tar \
+    gzip

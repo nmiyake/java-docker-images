@@ -6,5 +6,13 @@ Docker images for Java.
 alpine-oracle-jdk-8
 -------------------
 Based on a Docker image that uses Oracle JDK 8 with the Unlimited Strength JCE policy installed.
-Additionally, includes `bash`, `libstdc++`, `git` and `openssh` to allow the image to be run in
-CircleCI and to run Gradle tasks.
+
+Additionally, inclues the following:
+
+For Gradle support:
+  * `libstdc++`: required because Gradle needs 'libnative-platform.so'
+
+For CircleCI support:
+  * `bash`: required for command-line operations
+  * `git`, `openssh`: required for checking out source
+  * `tar`, `gzip`: required for cache restore operations
