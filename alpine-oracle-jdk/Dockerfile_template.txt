@@ -1,4 +1,4 @@
-FROM davidcaste/alpine-java-unlimited-jce:jdk8
+FROM davidcaste/alpine-java-unlimited-jce:{{.JDK_VERSION}}
 MAINTAINER Nick Miyake <nmiyake@gmail.com>
 
 RUN apk add --no-cache \

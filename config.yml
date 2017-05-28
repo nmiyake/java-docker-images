@@ -1,0 +1,10 @@
+build-id-var: CIRCLE_BUILD_NUM
+tag-suffix: -t{{BuildID}}
+for:
+  JDK_VERSION:
+    - jdk8
+    - jdk7
+builds:
+  alpine-oracle-jdk:
+    docker-template: alpine-oracle-jdk/Dockerfile_template.txt
+    tag: nmiyake/java:alpine-oracle-{{.JDK_VERSION}}
